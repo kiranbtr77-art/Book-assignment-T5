@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Book Collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>📖 My <span>Book</span> Collection</h1>
+    <a href="add.html" class="nav-btn">+ Add New Book</a>
+  </header>
+
+  <main>
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="stat-number" id="stat-total">0</div>
+        <div class="stat-label">Total Books</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" id="stat-avg">—</div>
+        <div class="stat-label">Avg. Price</div>
+      </div>
+    </div>
+
+    <div class="section-heading">All Books</div>
+    <div id="book-list" class="book-container">
+      <!-- Books load here -->
+    </div>
+  </main>
+
+  <!-- Delete confirmation modal -->
+  <div class="modal-overlay" id="confirmModal">
+    <div class="modal">
+      <h3>Delete Book?</h3>
+      <p>This will permanently remove the book from your collection. This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn-cancel" onclick="cancelDelete()">Cancel</button>
+        <button class="btn-confirm-delete" onclick="executeDelete()">Yes, Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>📖 My <span>Book</span> Collection</h1>
+    <a href="index.html" class="nav-btn">← Back to Collection</a>
+  </header>
+
+  <div class="form-page">
+    <h1>Update Book</h1>
+    <p class="subtitle">Edit the book details below and save your changes.</p>
+
+    <div class="form-card">
+      <div id="updateBookForm">
+
+        <div class="form-group">
+          <label>Title *</label>
+          <input type="text" id="updateTitle" placeholder="e.g. The Great Gatsby">
+        </div>
+
+        <div class="form-group">
+          <label>Author *</label>
+          <input type="text" id="updateAuthor" placeholder="e.g. F. Scott Fitzgerald">
+        </div>
+
+        <div class="form-group">
+          <label>ISBN *</label>
+          <input type="text" id="updateIsbn" placeholder="e.g. 978-0-7432-7356-5">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price ($) *</label>
+            <input type="number" id="updatePrice" placeholder="e.g. 14.99" min="0" step="0.01">
+          </div>
+          <div class="form-group">
+            <label>Discount (%)</label>
+            <input type="number" id="updateDiscount" placeholder="e.g. 10" min="0" max="100">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Cover Image</label>
+          <input type="file" id="updateImage" accept="image/*">
+          <div class="image-preview-wrap">
+            <img id="updateImagePreview" alt="Current cover">
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a href="index.html" class="btn-secondary">Cancel</a>
+          <button class="btn-primary" onclick="updateBook()">Save Changes</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Book</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>📖 My <span>Book</span> Collection</h1>
+    <a href="index.html" class="nav-btn">← Back to Collection</a>
+  </header>
+
+  <div class="form-page">
+    <h1>Add a New Book</h1>
+    <p class="subtitle">Fill in the details below to add a book to your collection.</p>
+
+    <div class="form-card">
+      <div id="addBookForm">
+
+        <div class="form-group">
+          <label>Title *</label>
+          <input type="text" id="title" placeholder="e.g. The Great Gatsby">
+        </div>
+
+        <div class="form-group">
+          <label>Author *</label>
+          <input type="text" id="author" placeholder="e.g. F. Scott Fitzgerald">
+        </div>
+
+        <div class="form-group">
+          <label>ISBN *</label>
+          <input type="text" id="isbn" placeholder="e.g. 978-0-7432-7356-5">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price ($) *</label>
+            <input type="number" id="price" placeholder="e.g. 14.99" min="0" step="0.01">
+          </div>
+          <div class="form-group">
+            <label>Discount (%)</label>
+            <input type="number" id="discount" placeholder="e.g. 10" min="0" max="100">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Cover Image</label>
+          <input type="file" id="image" accept="image/*">
+          <div class="image-preview-wrap">
+            <img id="imagePreview" alt="Preview">
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a href="index.html" class="btn-secondary">Cancel</a>
+          <button class="btn-primary" onclick="saveBook()">Save Book</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
